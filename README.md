@@ -46,4 +46,4 @@ https://www.geeksforgeeks.org/minimax-algorithm-in-game-theory-set-2-evaluation-
 
 ## Heuristic function or Evaluation function
 - problem dependent
-- determine the 'value' of a state (in terms of maximizer or minimizer goals - see below)
+- determine the 'value' of an end state
