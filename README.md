@@ -47,5 +47,11 @@ https://www.geeksforgeeks.org/minimax-algorithm-in-game-theory-set-2-evaluation-
 ## Heuristic function or Evaluation function
 - problem dependent
 - determine the 'value' of an end state
+- See index.js where I created a Heuristic function for a Tic-Tac-Toe board state defined as 1 Dimensional Array
 
-See index.js for more
+# Minimax Game Theory - Tic Tac Toe Finding the Optimal Move
+https://www.geeksforgeeks.org/minimax-algorithm-in-game-theory-set-3-tic-tac-toe-ai-finding-optimal-move/
+
+- minimax function is recursive function with base case of board state being a terminal state, see pseudo code at link above
+
+// todo see rest of this article ^
