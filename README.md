@@ -24,8 +24,9 @@ https://en.wikipedia.org/wiki/Metaheuristic
 
 # on metaheuristic algorithms vs heuristic algorithms
 https://stackoverflow.com/a/10485472
-heuristic is approximate (approximate != approximation)
-heuristic is problem dependent
-metaheuristic is problem independent
+- heuristic is approximate (approximate != approximation)
+- heuristic is problem dependent
+- metaheuristic is problem independent
 
-I find the concept of metaheuristic algorithms being problem-independent to be really interesting, one technique could be applied to more use cases maybe?
+- I personally find the concept of metaheuristic algorithms being problem-independent to be really interesting,
+...maybe this means one technique could be applied to more use cases maybe?
