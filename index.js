@@ -6,7 +6,7 @@
 
 /**
  * Return the player ('x' or 'o') who won the tic-tac-toe game, otherwise return null. (Does not handle 'draw' state)
- * @param {Array[][]} squares An Array of Rows, where each Row is an Array of characters 'x', 'o', or undefined meaning Player X, Player O, or blank
+ * @param {string[]} squares An Array of characters 'x', 'o', or undefined meaning Player X, Player O, or blank. 1D Array representing 9 spaces on tictactoe board
  */
 function worseCalculateWinner(squares) {
     const lines = [
@@ -43,7 +43,7 @@ function evaluate(finalState){
 /**
  * Same as above, except handles scenario of 'draw'
  * Return the player ('x' or 'o') who won the tic-tac-toe game, 'draw' if the game ended in draw, otherwise return null
- * @param {Array[][]} squares An Array of Rows, where each Row is an Array of characters 'x', 'o', or undefined meaning Player X, Player O, or blank
+ * @param {string[]} squares An Array of characters 'x', 'o', or undefined meaning Player X, Player O, or blank. 1D Array representing 9 spaces on tictactoe board.
  */
 function calculateWinner(squares) {
     const lines = [
