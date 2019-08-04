@@ -145,5 +145,6 @@ function minimax(board, depth, isMaximizerPlayer){
         board[i] = undefined;
       }
     }
+    return bestValue;
   }
 }
