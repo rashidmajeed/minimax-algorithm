@@ -1,3 +1,12 @@
+require('draftlog').into(console)
+
+/*
+// Example:
+const update = console.draft('Starting program...')
+console.log('random shit');
+update('Hy, my name is Chris!')
+*/
+
 /*
  * https://github.com/CaffeinateOften/react-tutorial-101-tic-tac-toe/blob/master/src/index.js#L126
  * This calculateWinner function is from Facebook's main React.js's tutorial
@@ -80,6 +89,8 @@ function calculateWinner(squares) {
     }
   }
 
+  /*
+  // Lazy test
   let finalBoardStates = [
     [   // 'o' wins, minimizer, -10
         'o', 'o', 'o',
@@ -111,10 +122,18 @@ o -10
 x 10
 draw 0
 `);
+*/
 
 function isInTerminalState(board){
   return calculateWinner(board) !== null;
 }
+
+let terminalStateCount = 0;
+const titleLog = console.draft('iterating...')
+const boardLog = console.draft('...');
+const depthLog = console.draft('...');
+const scoreLog = console.draft('...');
+const terminalStateCountLog = console.draft('Terminal States Found:', terminalStateCount);
 
 function minimax(board, depth, isMaximizerPlayer){
 
@@ -122,7 +141,14 @@ function minimax(board, depth, isMaximizerPlayer){
   const opponent = 'o';
 
   if(isInTerminalState(board)){
-    return evaluate(calculateWinner(board));
+    terminalStateCount++;
+    terminalStateCountLog('Terminal States Found:', terminalStateCount)
+    titleLog('Terminal Board State Found!');
+    boardLog('board:', board);
+    depthLog('depth:', depth);
+    const score = evaluate(calculateWinner(board));
+    scoreLog('score:', score);
+    return score;
   }
 
   if(isMaximizerPlayer){
@@ -148,3 +174,9 @@ function minimax(board, depth, isMaximizerPlayer){
     return bestValue;
   }
 }
+
+
+const initialState = new Array(9);
+const bestValue = minimax(initialState, 0, true);
+
+console.log('best possible end state for player x, assuming that opponent plays optimally:', bestValue)
